@@ -1,0 +1,57 @@
+* {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  img {
+    /*border-radius: 15px 15px 0px 0px;*/
+    height: 100%;
+    width: auto;
+  }
+  .dogImage img{
+    position: relative;
+    top: 24px;
+    border-radius: 10px;
+  }
+  .dogProfile {
+    border-radius: 15px;
+    margin: auto;
+  }
+
+  .dogImage {
+    height: 300px;
+    width: 100%;
+
+    /*margin: auto;*/
+    text-align: center;
+    background-color: lightgrey;
+    border-radius: 15px;
+  }
+
+  mat-card-actions {
+    text-align: center;
+  }
+
+  mat-card-actions a {
+    text-decoration: none;
+  }
+
+  mat-card-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #like {
+    /*width: 100px;*/
+    height: 100px;
+    background-color: #79ffba;
+    border-radius: 15px 0px;
+  }
+  #next {
+    background-color: #ff5249;
+    border-radius: 0px 15px;
+  }
+
+  .user img {
+    border-radius: 50%;
+  }

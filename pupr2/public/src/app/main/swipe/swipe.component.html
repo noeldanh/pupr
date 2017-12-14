@@ -1,0 +1,58 @@
+<!-- <p>works</p> -->
+
+<main class="row">
+  <mat-card class="dogProfile col-md-8" (swipeleft)="swipe(dogIndex, $event.type)">
+    <div class="dogImage">
+      <img mat-card-image src="{{currentDog.image}}" alt="Picture of the Dog">
+    </div>
+    <mat-card-header class="dogInformation">
+      <mat-card-title><h1>Name: {{currentDog.name}} <span *ngIf="currentDog.sex == 'Male'">&#9794;</span><span *ngIf="currentDog.sex == 'Female'">&#9792;</span></h1></mat-card-title>
+      <mat-card-subtitle>{{currentDog.age}} year old {{currentDog.breed}}</mat-card-subtitle>
+      <mat-card-subtitle>Shelter: {{currentDog.shelter}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="description">
+      <p><em>About {{currentDog.name}}:</em> {{currentDog.Description}}</p>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            More Details
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-chip-list>
+          <mat-grid-list cols='2'>
+            <mat-grid-tile>
+              <mat-chip>Good with kids: &#9733;&#9734;&#9734;&#9734;&#9734;</mat-chip>
+              <mat-chip>Good with kids: &#9733;&#9734;&#9734;&#9734;&#9734;</mat-chip>
+              <mat-chip>Good with kids: &#9733;&#9734;&#9734;&#9734;&#9734;</mat-chip>
+              <mat-chip>Good with kids: &#9733;&#9734;&#9734;&#9734;&#9734;</mat-chip>
+              <mat-chip>Good with kids: &#9733;&#9734;&#9734;&#9734;&#9734;</mat-chip>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-chip>Good with Elderly: &#9733;&#9734;&#9734;&#9734;&#9734;</mat-chip>
+              <mat-chip>Good with Elderly: &#9733;&#9734;&#9734;&#9734;&#9734;</mat-chip>
+              <mat-chip>Good with Elderly: &#9733;&#9734;&#9734;&#9734;&#9734;</mat-chip>
+              <mat-chip>Good with Elderly: &#9733;&#9734;&#9734;&#9734;&#9734;</mat-chip>
+              <mat-chip>Good with Elderly: &#9733;&#9734;&#9734;&#9734;&#9734;</mat-chip>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </mat-chip-list>
+      </mat-expansion-panel>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button id="adopt"><a href="{{currentDog.shelterLink}}">Adopt Me!</a></button>
+    </mat-card-actions>
+    <mat-card-footer>
+      <button mat-button id="next" (click)="getNextDog()">NEXT</button>
+      <!-- <button mat-raised-button>Share</button> -->
+      <share-container mat-raised-button
+        direction="horizontal"
+        addedText="{{currentDog.name}}"
+        [expandable]="false"
+        [textEnabled]="false"
+        [platforms]="['facebook', 'twitter', 'mail']"
+        [properties]="{title: currentDog.name, description:currentDog.Description, img: currentDog.image, via:'Ced_VDB', hashtags:'Pupr'}">
+      </share-container>
+      <button mat-button id="like" (click)="addToFavorites(currentDog._id)"><mat-icon class="md-24">&hearts;</mat-icon></button>
+    </mat-card-footer>
+  </mat-card>
+</main>

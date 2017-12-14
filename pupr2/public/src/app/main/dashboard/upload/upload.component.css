@@ -1,0 +1,11 @@
+.upload{
+  margin-top: 200px;
+  background-color: #F0FFFF;
+  margin: auto;
+  width: 30%;
+  height: 500px;
+  border: 1px solid #c3c3c3;
+  vertical-align: middle;
+  text-align: center;
+  align-items:center;
+}

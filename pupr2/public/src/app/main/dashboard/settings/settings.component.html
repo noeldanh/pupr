@@ -1,0 +1,99 @@
+<div class="jumbotron">
+  <h2>Settings</h2>
+  <h3>Hey {{currentUser.firstName}}!</h3>
+  <h3>Make changes to your account</h3>
+</div>
+  <mat-accordion class="example-headers-align">
+    <form (submit)="updateCurrentUser();" #updateForm="ngForm">
+      <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Contact Information
+          </mat-panel-title>
+          <mat-panel-description>
+            Update your Account
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div>
+          <mat-form-field>
+            <label>Email: </label>
+            <input matInput type="text" name="email" placeholder="Email" [(ngModel)]="currentUser.email">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <label>Address: </label>
+            <input matInput type="text" name="address" placeholder="Address" [(ngModel)]="currentUser.address">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <label>City:</label>
+            <input matInput type="text" name="city" placeholder="City" [(ngModel)]="currentUser.city">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <label>State:</label>
+            <input matInput type="text" name="state" placeholder="State" [(ngModel)]="currentUser.state">          
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <label>Zip Code:</label>
+            <input matInput type="text" name="string" placeholder="Zip Code" [(ngModel)]="currentUser.zip">         
+          </mat-form-field>
+        </div>        
+        <mat-action-row>
+          <button mat-button color="primary" (click)="nextStep()">Next</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+    
+      <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Password
+          </mat-panel-title>
+          <mat-panel-description>
+            Update your Password
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div>
+        <mat-form-field>
+          <label>Password:</label>
+          <input type="password" name="password" [(ngModel)]="currentUser.password">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <label>Password Confirmation:</label>
+          <input type="password" name="password_confirmation" [(ngModel)]="currentUser.password_confirmation">
+        </mat-form-field>
+      </div>
+        <mat-action-row>
+          <button mat-button color="warn" (click)="prevStep()">Previous</button>
+          <button mat-button color="primary" (click)="nextStep()">Next</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+    
+      <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            About You
+          </mat-panel-title>
+          <mat-panel-description>
+            Update your Bio
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+    
+        <mat-form-field>
+            <textarea name="bio" [(ngModel)]="currentUser.bio"></textarea>
+        </mat-form-field>
+    
+        <mat-action-row>
+          <button mat-button color="warn" (click)="prevStep()">Previous</button>
+          <button type="submit" mat-button color="primary" (click)="nextStep()">End</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+     </form>
+    </mat-accordion>

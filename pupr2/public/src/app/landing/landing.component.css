@@ -1,0 +1,262 @@
+#wrapper{
+    background-color: white;
+
+}
+.navbar{
+    background-image: url("/assets/images/nav_fur.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.navbar-brand{
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+
+    border: 15px solid transparent;
+    padding: 10px;
+    -webkit-border-image: url("/assets/images/border2.png") 30% round; /* Safari 3.1-5 */
+    -o-border-image: url("/assets/images/border2.png") 30% round; /* Opera 11-12.1 */
+    border-image: url("/assets/images/border2.png") 30% round;
+    /*border-color: red;
+    border-style: double;*/
+}
+
+.nav-link{
+    color: white!important;
+    font-size: 3vmin;
+    font-weight: bold!important;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+
+    border: 15px solid transparent;
+    padding: 10px;
+    -webkit-border-image: url("/assets/images/border2.png") 30% round; /* Safari 3.1-5 */
+    -o-border-image: url("/assets/images/border2.png") 30% round; /* Opera 11-12.1 */
+    border-image: url("/assets/images/border2.png") 30% round;
+    /*border-color: red;
+    border-style: double;*/
+}
+
+.h1_pupr{
+    margin-top: 0.3em;
+    padding: 0;
+    font-family: "Baksoda", Garamond, "Baksoda", serif;
+    font-size: 30vmin;
+    letter-spacing: 17px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.jumbotron{
+    background: transparent;
+    margin-top: 3.8%;
+    padding: 25px;
+    text-align: center;
+    margin-bottom: 2%;
+
+    background-image: url("/assets/images/dogs.png");
+    background-repeat: no-repeat;
+    background-size: 90em;
+    background-position: top;
+}
+
+/*P Tag*/
+.lead{
+    color: #8F7F68;
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-top: 3.8%;
+}
+
+/*P Tag*/
+.lead2{
+    color: #8F7F68;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/*Button*/
+.btn{
+    margin: 0;
+    background-color: #487A3E;
+    border: 3px dashed white;
+    border-width: thin;
+    border-radius: 10px;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-weight: 580;
+    letter-spacing: 1px;
+    -moz-box-shadow: 9px 9px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 9px 9px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.30), 0 9px 9px rgba(0,0,0,0.22);
+
+}
+
+#home-section1{
+    margin-bottom: 3.5%;
+
+    /*border-color: black;
+    border-style: double;*/
+}
+
+.dark-overlay{
+    /*border-color: blue;
+    border-style: double;*/
+}
+
+.container{
+    text-align: center;
+
+    /*border-color: yellow;
+    border-style: double;*/
+}
+
+.row{
+    text-align: center;
+
+}
+
+.what1 {
+    width: 95vmin;
+    height: 30vmin;
+    text-align: center;
+    margin: 1.2em auto;
+    color: white;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+
+    background-image: url("/assets/images/funny1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+
+    -moz-box-shadow: 9px 9px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 9px 9px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.30), 0 9px 9px rgba(0,0,0,0.22);
+
+    /*border-color: white;
+    border-style: solid;*/
+}
+
+.what2 {
+    width: 95vmin;
+    height: 30vmin;
+
+    text-align: center;
+    margin: 1.2em auto;
+    color: white;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+
+    background-image: url("/assets/images/funny2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+
+    -moz-box-shadow: 9px 9px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 9px 9px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.30), 0 9px 9px rgba(0,0,0,0.22);
+
+    /*border-color: white;
+    border-style: solid;*/
+}
+
+.what3 {
+    width: 95vmin;
+    height: 30vmin;
+
+    text-align: center;
+    margin: 1.2em auto;
+    color: white;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+
+    background-image: url("/assets/images/funny3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+
+    -moz-box-shadow: 9px 9px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 9px 9px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.30), 0 9px 9px rgba(0,0,0,0.22);
+
+    /*border-color: white;
+    border-style: solid;*/
+}
+
+.card{
+    background: transparent;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border-color: transparent!important;
+}
+
+.card-body{
+    padding: 5px;
+    border-color: transparent!important;
+}
+
+.row_bottom{
+    /*border-color: #487A3E;
+    border-style: dashed;
+    border-width: thin;
+    border-bottom: transparent;*/
+
+    background-image: url("/assets/images/dog_house.png");
+    background-repeat: no-repeat;
+    background-size: 41vmin;
+    background-color: #A3CE49;
+    background-position: right;
+}
+
+.borderimg{
+    border: 10px solid;
+    padding: .1px;
+    -webkit-border-image: url("/assets/images/border.png") 20% round; /* Safari 3.1-5 */
+    -o-border-image: url("/assets/images/border.png") 20% round; /* Opera 11-12.1 */
+    border-image: url("/assets/images/border.png") 20% round;
+}
+
+.shelter {
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    color: white;
+
+    /*border-color: green;
+    border-style: double;*/
+}
+/*How it Works - Shelter News*/
+.display-4-4{
+    color: #487A3E;
+    text-align: center;
+    font-size: 2.8em;
+    font-weight: 600;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+
+    /*border-color: purple;
+    border-style: double;*/
+}
+
+.box {
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+
+    /*border-color: red;
+    border-style: double;*/
+}
+
+.h1_box{
+    margin: 0;
+    font-size: 1.5em;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+
+    /*border-color: green;
+    border-style: double;*/
+}

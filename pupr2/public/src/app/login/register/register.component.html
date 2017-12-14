@@ -1,0 +1,157 @@
+<div class="register col- col-12 col-m-12">
+    <h2>Pupr</h2>
+    <form (submit)="createUser();" #registerForm="ngForm">
+
+        <div class="r_form">
+            <input type="text"
+            name="firstName"
+            required
+            minlength="2"
+            placeholder="First Name"
+            [(ngModel)]="newUser.firstName"
+            #firstName="ngModel"
+            >
+        </div>
+        <p *ngIf="firstName.errors?.required && (firstName.touched || firstName.dirty)">Please enter your first name.</p>
+		<p *ngIf="firstName.errors?.minlength && (firstName.touched || firstName.dirty)">Must be at least 2 characters.</p>
+
+        <div class="r_form">
+            <input type="text"
+            name="lastName"
+            required
+            minlength="2"
+            placeholder="Last Name"
+            [(ngModel)]="newUser.lastName"
+            #lastName="ngModel"
+            >
+        </div>
+        <p *ngIf="lastName.errors?.required && (lastName.touched || lastName.dirty)">Please enter your last name.</p>
+		<p *ngIf="lastName.errors?.minlength && (lastName.touched || lastName.dirty)">Must be at least 2 characters.</p>
+
+
+        <div class="r_form">
+            <input type="text"
+            name="email"
+            required
+            placeholder="Email"
+            [(ngModel)]="newUser.email"
+            #email="ngModel"
+            >
+        </div>
+        <p *ngIf="email.errors?.required && (email.touched || email.dirty)">Please enter your email.</p>
+        <p *ngFor="let error of registrationErrors">{{ error }}</p>
+
+        <div class="r_form">
+            <input type="text"
+            name="alias"
+            required
+            placeholder="Desired Username: "
+            [(ngModel)]="newUser.alias"
+            #alias="ngModel"
+            >
+        </div>
+        <p *ngIf="alias.errors?.required && (alias.touched || alias.dirty)">Please enter your username.</p>
+
+        <div class="r_form">
+            <input type="password"
+            name="password"
+            required
+            placeholder="Password"
+            [(ngModel)]="newUser.password"
+            #password="ngModel"
+            >
+        </div>
+        <p *ngIf="password.errors?.required && (password.touched || password.dirty)">Please enter a password.</p>
+
+        <div class="r_form">
+            <input type="password"
+            name="pConfirmation"
+            required
+            placeholder="Password Conf" [(ngModel)]="newUser.password_confirmation"
+            #pConfirmation="ngModel"
+            >
+        </div>
+        <p *ngIf="!pConfirmation.valid && (pConfirmation.dirty || pConfirmation.touched)">Please confirm password.</p>
+		<p *ngIf="newUser.password != newUser.password_confirmation && (pConfirmation.dirty || pConfirmation.touched)">Passwords do not match.</p>
+
+        <div class="r_form">
+            <input type="text"
+            name="address"
+            required
+            placeholder="Address: "
+            [(ngModel)]="newUser.address"
+            #address="ngModel"
+            >
+        </div>
+        <p *ngIf="address.errors?.required && (address.touched || address.dirty)">Please enter an address.</p>
+
+
+        <div class="r_form">
+            <input type="text"
+            name="city"
+            required
+            placeholder="City: "
+            [(ngModel)]="newUser.city"
+            #city="ngModel"
+            >
+        </div>
+        <p *ngIf="city.errors?.required && (city.touched || city.dirty)">Please enter a city.</p>
+
+        <div class="r_form">
+            <input type="text"
+            name="state"
+            required
+            maxlength="2"
+            placeholder="State "
+            [(ngModel)]="newUser.state"
+            #state="ngModel"
+            >
+        </div>
+        <p *ngIf="state.errors?.required && (state.touched || state.dirty)">Please enter a state.</p>
+
+
+        <div class="r_form">
+            <input type="text"
+            name="zip"
+            required
+            maxlength="5"
+            placeholder="Zip "
+            [(ngModel)]="newUser.zip"
+            #zip="ngModel"
+            >
+        </div>
+        <p *ngIf="zip.errors?.required && (zip.touched || zip.dirty)">Please enter a zip.</p>
+        <!-- <p *ngIf="zip.errors?.minlength && (zip.touched || zip.dirty)">Must be at least 5 characters.</p> -->
+
+        <div class="r_form">
+            <label class="r_form">Birthday:</label>
+            <input class="r_form" type="date"
+            name="birthday"
+            placeholder="Birthday"
+            required
+            [(ngModel)]="newUser.birthday"
+            #birthday="ngModel"
+            >
+        </div>
+        <p *ngIf="birthday.errors?.required && (birthday.touched || birthday.dirty)">Please enter a birthday.</p>
+
+        <div class="r_form">
+            <input type="text"
+            name="bio"
+            placeholder="Bio"
+            required
+            maxlength="140"
+            [(ngModel)]="newUser.bio"
+            #bio="ngModel"
+            >
+        </div>
+        <p *ngIf="bio.errors?.required && (bio.touched || bio.dirty)">Please enter a bio.</p>
+
+        <input class="submit_b" [disabled]="!registerForm.form.valid" type="submit" value="Register">
+    </form>
+
+    <img class="dog_register" src="assets/images/dog_register.png">
+    <img class="logo_register" src="assets/images/logo1.png">
+
+
+</div>
